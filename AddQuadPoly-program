@@ -1,0 +1,42 @@
+public class AddQuadPoly
+ {
+  // this is a class variable, stores a reference to the polynomial object which
+  // contains 3 coefficients supplied as command line args
+
+ // Creating 3 Quad Polynomials: first, second and third (the addition of first and second)
+ public static void main(String[] args)
+  { 
+    QuadPoly aQuadPoly = new QuadPoly (Double.parseDouble(args[0]),
+                                       Double.parseDouble(args[1]),
+                                       Double.parseDouble(args[2]));
+
+    QuadPoly bQuadPoly = new QuadPoly (Double.parseDouble(args[3]),
+                                       Double.parseDouble(args[4]),
+                                       Double.parseDouble(args[5]));
+
+    QuadPoly addQuadPoly = new QuadPoly (aQuadPoly.coefficient1
+                                        + bQuadPoly.coefficient1,
+                                        aQuadPoly.coefficient2
+                                        + bQuadPoly.coefficient2,
+                                        aQuadPoly.coefficient3
+                                        + bQuadPoly.coefficient3);
+
+// Cast the values from double to string to print
+    String quad1 = Double.toString(aQuadPoly.coefficient1);
+    String quad2 = Double.toString(aQuadPoly.coefficient2);
+    String quad3 = Double.toString(aQuadPoly.coefficient3);
+
+    String quad4 = Double.toString(bQuadPoly.coefficient1);
+    String quad5 = Double.toString(bQuadPoly.coefficient2);
+    String quad6 = Double.toString(bQuadPoly.coefficient3);
+
+    String quad7 = Double.toString(addQuadPoly.coefficient1);
+    String quad8 = Double.toString(addQuadPoly.coefficient2);
+    String quad9 = Double.toString(addQuadPoly.coefficient3);
+
+//Print the two given polynomials and one resulting polynomial
+    System.out.println("Polynomial: " + quad1 + "x^2 + " + quad2 + "x + " + quad3);
+    System.out.println("Added to: " + quad4 + "x^2 + " + quad5 + "x + " + quad6);
+    System.out.println("Results in: " + quad7 + "x^2 + " + quad8 + "x + " + quad9);
+  }
+}
