@@ -1,0 +1,14 @@
+// representation of a polynomial (e.g. 6.0x^2 + 4.0x + 2.0)
+public class QuadPoly
+{
+  //three coefficients needed
+  public double coefficient1, coefficient2, coefficient3;
+
+  // construct a polynomial given the required coefficients
+  public QuadPoly(double requiredCoI, double requiredCoII, double requiredCoIII)
+  {
+    coefficient1 = requiredCoI;
+    coefficient2 = requiredCoII;
+    coefficient3 = requiredCoIII;
+  }
+}
